@@ -380,9 +380,10 @@ diatheke."
     (delete-region (point) end-point)))
 
 (defun dtk-bible-retrieve-setup (&optional book chapter verse dtk-buffer-p)
-  "BOOK is a string. CHAPTER is an integer. VERSE is an integer. If
-BOOK is not specified, rely on interacting via the minibuffer to
-obtain book, chapter, and verse. Set DTK-TO-RETRIEVE."
+  "Set DTK-TO-RETRIEVE. If BOOK is not specified, rely on interacting
+via the minibuffer to obtain book, chapter, and verse. Otherwise, BOOK
+should be a string. CHAPTER is either NIL or an integer. VERSE is
+either NIL or an integer."
   (interactive)
   (let* ((completion-ignore-case t)
          (final-book    (or book
