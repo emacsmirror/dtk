@@ -1385,7 +1385,7 @@ node ELEMENT-NODE. If DESCENDP is true, descend into child element nodes."
 			  (lax-plist-get dtk-module-last-selection
 					 dict-module-category)
 			  (let ((dtk-module-category dict-module-category))
-			    (dtk-select-module "First select a module: ")))))
+			    (dtk-select-module "First select a dictionary module: ")))))
     (cond (dict-module
 	   (let ((key-module-note (dtk-dict-key-for-word-at-point dict-module))
 		 (format :plain))
